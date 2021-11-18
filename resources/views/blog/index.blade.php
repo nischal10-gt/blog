@@ -17,6 +17,7 @@
                     <th>content</th>
                     <th>category</th>
                     <th>author</th>
+                    <th>tags</th>
                     <th>action </th>
                 </thead>
                 <tbody>
@@ -27,6 +28,7 @@
                         <td>{{ $blog->content }} </td>
                         <td>{{implode(",",$blog->categories->pluck('title')->toArray())}} </td><!--converting object title column to array and array to string -->
                         <td>{{ $blog->author->full_name }} </td>
+                        <td>{{ $blog->tags }} </td>
                          <td>
                                <form action="{{ route('blog.destroy',$blog->id) }}" method="post">
                                 @csrf

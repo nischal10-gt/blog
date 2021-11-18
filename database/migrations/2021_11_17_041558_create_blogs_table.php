@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->foreignId('author_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->text('content');
+            $table->string('tags')->nullable();
             $table->timestamps();
         });
     }
