@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,10 +19,39 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    
+  
 <!-- select 2 css and js file link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery-3.6.0.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+   
+    <!-- bootstrap tags input-->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}" />
+    <script src="{{ asset('js/bootstrap-tagsinput.js') }}"> </script>
+    <style type="text/css">
+        .bootstrap-tagsinput{
+            width: 100%;
+        }
+        .label-info{
+            background-color: #17a2b8;
+
+        }
+        .label {
+            display: inline-block;
+            padding: .25em .4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,
+            border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -103,7 +133,8 @@
         
             @yield('content')
 
-    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+
+            <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     
     @stack('scripts')
     </div>

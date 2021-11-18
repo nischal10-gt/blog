@@ -27,10 +27,11 @@ class BlogController extends Controller
     public function store(BlogRequest $request)
     {
         $request->validated();
-
+      
         $blog = new Blog();
         $blog->title=$request->title;
         $blog->content=$request->content;
+        $blog->tags=$request->tags;
         $blog->author_id=$request->full_name;
         $blog->save();
 
@@ -54,11 +55,13 @@ class BlogController extends Controller
     }
 
     public function update(Blog $blog, BlogRequest $request){
-    
+      
         $request->validated();
+        
         $blog->title=$request->title;
         $blog->content=$request->content;
         $blog->author_id=$request->full_name;
+        $blog->tags=$request->tags;
         $blog->save();
 
         $categories = $request->input('category');

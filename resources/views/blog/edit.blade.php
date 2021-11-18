@@ -60,7 +60,7 @@
 
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <strong>Categories:</strong>
                     <select id='myselect' name="category[]" multiple>
                         <option value="">Select An Option</option>
@@ -75,6 +75,12 @@
                           {{ $message }}
                       </div>
                   @enderror
+                </div>
+
+                <div class="form-group">
+                    <strong>Categories:</strong>
+                    <input type="text" name="tags" class="form-control" value="{{ $blog->tags }}" data-role="tagsinput" >
+
                 </div>
 
                

@@ -16,6 +16,8 @@
        <p> <strong>Category: </strong> <span class="text-muted m-3">{{implode(",",$blog->categories->pluck('title')->toArray())}} </span></p>
       <hr>
        <p> <strong>Author: </strong> <span class="text-muted m-3">{{ $blog->author->full_name }} </span></p>
+       <hr>
+       <p> <strong>Tags: </strong> <span class="text-muted m-3">{{ $blog->tags }} </span></p>
     </div>
 </div>
 @endsection

@@ -58,7 +58,7 @@
                
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <strong>Categories:</strong>
                     <select id='myselect' name="category[]" multiple>
                         <option value="">Select An Option</option>
@@ -73,8 +73,13 @@
                   @enderror
                 </div>
 
-               
+                <div class="form-group">
+                    <strong>Categories:</strong>
+                    <input type="text" name="tags" class="form-control" placeholder="enter comma seperated tags" data-role="tagsinput" >
 
+                </div>
+
+            
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Save</button>
 

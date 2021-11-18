@@ -26,8 +26,9 @@ class BlogRequest extends FormRequest
         return [
             'title'=>'required',
             'content'=>'required',
-            'author_id'=>'required',
+            'full_name'=>'required',
             'category.*'=>'required',
+            'tags'=>'sometimes',
         ];
     }
 }
