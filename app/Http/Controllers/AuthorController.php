@@ -23,7 +23,7 @@ class AuthorController extends Controller
 
     public function store(AuthorRequest $request){
 
-      $request->validated();
+     $data= $request->validated();
 
        Author::create($data);
        
